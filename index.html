@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body >
+   <div class="div1">
+    <div class="div2">
+        <h1>Welcome To the Personalized <br>Greeting App</h1>
+        <button onclick="greeting()" class="btn">Get Greeting</button>
+        <p id="display greeting"></p>
+    </div>
+    <div>
+        <img src="pic-removebg-preview.png" class="image">
+    </div>
+   </div>
+
+    <script>
+        function greeting(){
+            let userName = prompt("Enter your name ");
+        let userAge = prompt("Enter your age");
+
+        if(userAge>=18){
+            document.getElementById('display greeting').innerHTML=`"Welcome ${userName}! you are Eligible to participate. "`;
+
+        }
+        else{
+            document.getElementById('display greeting').innerHTML =`"sorry ${userName}, you are too young to join."`;
+        }
+        }
+       
+    </script>
+
+
+
+
+</body>
+
+</html>
