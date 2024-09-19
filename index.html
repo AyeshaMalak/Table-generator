@@ -1,44 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body >
-   <div class="div1">
-    <div class="div2">
-        <h1>Welcome To the Personalized <br>Greeting App</h1>
-        <button onclick="greeting()" class="btn">Get Greeting</button>
-        <p id="display greeting"></p>
-    </div>
-    <div>
-        <img src="pic-removebg-preview.png" class="image">
-    </div>
-   </div>
-
-    <script>
-        function greeting(){
-            let userName = prompt("Enter your name ");
-        let userAge = prompt("Enter your age");
-
-        if(userAge>=18){
-            document.getElementById('display greeting').innerHTML=`"Welcome ${userName}! you are Eligible to participate. "`;
-
-        }
-        else{
-            document.getElementById('display greeting').innerHTML =`"sorry ${userName}, you are too young to join."`;
-        }
-        }
-       
-    </script>
-
-
-
-
-</body>
-
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Table Printer</title> 
+    <link rel="stylesheet" href="styles.css"> 
+</head> 
+<body> 
+    <div class="container"> 
+        <h1>Table Printer</h1>
+        <div id="inputs"> 
+            <label for="print-num">Which table you want to print?</label> 
+            <input id="print-num" type="number" placeholder="Enter a number">  
+            <label for="minlength">Start from...</label>  
+            <input type="number" id="minlength" placeholder="Start value"> 
+            <label for="maxlength">End at...</label> 
+            <input type="number" id="maxlength" placeholder="End value"> 
+        </div> 
+        <div class="buttons"> 
+            <button onclick="printTable()">Print Table</button> 
+            <button id="refresh" onclick="refresh()">Refresh</button> 
+        </div> 
+        <p id="table"></p> 
+    </div> 
+    <script src="script.js"></script> 
+</body> 
 </html>
